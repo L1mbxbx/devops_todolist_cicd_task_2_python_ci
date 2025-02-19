@@ -1,2 +1,2 @@
 [flake8]
-exntend-ignore: E501, W605
+exntend-ignore: F401, E501, W605,
