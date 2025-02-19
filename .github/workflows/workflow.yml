@@ -35,4 +35,14 @@ jobs:
 
         - name: Lint
           run: |
+            cd ../
             flake8 . --show-source --statistics
+
+        - name: Check-Complexity
+          run: |
+            cd ../
+            flake8. --statistics --max-complexity=10 --exit-zero
+
+        - name: Run unit tests with pytest
+          run: |
+            pytest -v --conv=. --cov-report=term-missing --cov-report-json
