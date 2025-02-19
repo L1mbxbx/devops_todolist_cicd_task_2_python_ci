@@ -23,12 +23,12 @@ jobs:
           uses: actions/checkout@v4
 
         - name: Set up Python ${{ env.PYTHON_VERSION }}
-          uses: actions/setup-python@5
+          uses: actions/setup-python@v5
           with:
             python-version: '${{ env.PYTHON_VERSION }}'
 
         - name: Install Dependencies
           run: |
             python -m pip install --upgrade pip
-            pip install -r requirements.txt
+            pip install -r ./src/requirements.txt
             pip install coverage flake8
