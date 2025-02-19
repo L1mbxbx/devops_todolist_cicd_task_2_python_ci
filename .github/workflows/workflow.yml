@@ -34,7 +34,7 @@ jobs:
             pip install pytest coverage flake8
 
         - name: Run tests
-          run: pytest --junitxml=test-results.xml
+          run: pytest accounts --junitxml=test-results.xml
 
         - name: Generate coverage report
           run: coverage run -m pytest
