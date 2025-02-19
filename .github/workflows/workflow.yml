@@ -9,6 +9,7 @@ on:
 
 env:
     PYTHON_VERSION: 3.8
+    DJANGO_SETTINGS_MODULE: ./todolist/settings.py
 
 jobs:
     python-ci:
